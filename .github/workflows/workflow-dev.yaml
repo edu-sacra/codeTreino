@@ -1,5 +1,5 @@
 name: Deploy via ftp
-on: 
+on:
   pull_request:
     branches:
       ['develop']
@@ -12,16 +12,16 @@ jobs:
     - name: Using Node.js
       uses: actions/setup-node@v2
       with:
-        node-version:16.
+        node-version: 18.
     - name: run install, build
       run: |
         npm install
-        npm run build  
+        npm run build
 
     - name: FTP Deploy Locaweb
       uses: locaweb/ftp-deploy@1.0.0
       with:
-        host: ftp.codetreino.com.br 
+        host: ftp.codetreino.com.br
         user: codetreino1
         password: Codetreino2024@
         localDir: "dist/code-treino-v3/browser"
