@@ -5,8 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href /codeTreino/ --output-path=docs/ --deploy-url /codeTreino/ && npm run postbuild",
-    "postbuild": "mv docs/browser/* docs/ && rm -rf docs/browser && cp src/404.html docs/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
